@@ -1,0 +1,35 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.idea/
+*.DotSettings.user
+appsettings.Development.json
+appsettings.Local.json
+
+## NuGet
+*.nupkg
+packages/
+
+## Test results
+TestResults/
+coverage/
+*.trx
+
+## Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/coverage/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Environment
+.env
+.env.local
+*.env
