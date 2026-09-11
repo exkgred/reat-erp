@@ -33,3 +33,5 @@ Thumbs.db
 .env
 .env.local
 *.env
+!.env.example
+!frontend/.env.production

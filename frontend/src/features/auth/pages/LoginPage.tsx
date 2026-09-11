@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useNavigate } from 'react-router-dom'
+import { isDemo } from '@/lib/demo-mode'
 import { useAuthStore } from '../hooks/useAuthStore'
 
 const loginSchema = z.object({
@@ -29,12 +30,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 px-4">
+    <div className="flex h-full min-h-full items-center justify-center bg-slate-900 px-4">
       <div className="w-full max-w-md rounded-xl bg-white p-8 shadow-2xl">
         <div className="text-center mb-6">
           <div className="mx-auto h-12 w-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-2xl font-bold mb-2">V</div>
           <h1 className="text-2xl font-bold text-slate-800">ERP VendaCore</h1>
           <p className="text-sm text-slate-500">Acesse com suas credenciais de tenant</p>
+          {isDemo && (
+            <p className="mt-2 text-xs text-slate-400">
+              Demo estática: use admin@vendacore.com / password123 (já preenchido)
+            </p>
+          )}
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
