@@ -67,9 +67,11 @@ dotnet run
 O frontend sobe sozinho, sem API .NET, PostgreSQL ou Redis. Com `VITE_DEMO=true` os CRUDs (clientes, produtos, pedidos, estoque e financeiro) rodam no navegador e persistem no `localStorage`. O faturamento baixa estoque e gera contas a receber.
 
 1. No [Vercel](https://vercel.com/new) importe `exkgred/reat-erp`
-2. **Root Directory:** `frontend`
-3. Framework: Vite · Build: `npx vite build` · Output: `dist`
+2. Deixe **Root Directory** na raiz do repositório (o `vercel.json` da raiz já builda `frontend`)
+3. Framework: Other · o build gera `frontend/dist`
 4. Variável: `VITE_DEMO=true` (já vem em `frontend/.env.production`)
+
+Se o projeto já existir na Vercel e estiver em 404, em **Settings → General → Root Directory** deixe em branco (não use `frontend`) e faça Redeploy. O arquivo `vercel.json` na raiz do repo é o que corrige o NOT_FOUND.
 
 Login da demo: `admin@vendacore.com` / `password123` (já vem preenchido).
 
