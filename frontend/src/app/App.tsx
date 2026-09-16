@@ -6,7 +6,7 @@ import { AppRouter } from './router'
 export function App() {
   return (
     <Providers>
-      <div className="flex h-dvh min-h-dvh flex-col">
+      <div className="flex h-dvh min-h-dvh flex-col bg-[#0b0e14]">
         {isDemo && (
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 bg-blue-700 px-3 py-1.5 text-center text-[11px] text-blue-50 sm:text-xs">
             <span>Demo estática do VendaCore ERP — CRUDs no navegador, sem API .NET. Login: admin@vendacore.com / password123</span>
