@@ -71,7 +71,7 @@ function RequireAuth({ children }: { children: React.ReactNode }) {
 export function AppRouter() {
   return (
     <BrowserRouter>
-      <div className="flex h-full min-h-0 flex-1 flex-col">
+      <div className="flex min-h-0 flex-1 flex-col">
         <Suspense fallback={<div className="flex h-full items-center justify-center">Carregando...</div>}>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
