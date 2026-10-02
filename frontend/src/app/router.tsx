@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Navigate, Link, useLocation } from 'react-router-dom'
+import { BrandMark } from '@/components/BrandMark'
 import { useAuthStore } from '@/features/auth/hooks/useAuthStore'
 import { LayoutDashboard, Users, Package, ShoppingCart, Archive, DollarSign, LogOut } from 'lucide-react'
 
@@ -22,9 +23,8 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-full min-h-0 flex-1 bg-gray-100">
       <aside className="w-64 bg-slate-900 text-white flex flex-col">
-        <div className="p-4 border-b border-slate-800 flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold">V</div>
-          <span className="text-lg font-bold">VendaCore ERP</span>
+        <div className="p-4 border-b border-slate-800">
+          <BrandMark size={32} className="text-white" />
         </div>
         <nav className="flex-1 p-4 space-y-1">
           <Link to="/" className={navClass(location.pathname === '/')}>

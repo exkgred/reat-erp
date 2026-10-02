@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useNavigate } from 'react-router-dom'
+import { BrandMark } from '@/components/BrandMark'
 import { isDemo } from '@/lib/demo-mode'
 import { useAuthStore } from '../hooks/useAuthStore'
 
@@ -33,7 +34,9 @@ export default function LoginPage() {
     <div className="flex min-h-dvh w-full flex-1 items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(79,142,247,0.16),_transparent_42%),#0b0e14] px-4 py-8">
       <div className="w-full max-w-md rounded-xl border border-white/10 bg-white p-8 shadow-2xl">
         <div className="text-center mb-6">
-          <div className="mx-auto h-12 w-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-2xl font-bold mb-2">V</div>
+          <div className="mb-3 flex justify-center text-slate-800">
+            <BrandMark size={40} />
+          </div>
           <h1 className="text-2xl font-bold text-slate-800">ERP VendaCore</h1>
           <p className="text-sm text-slate-500">Acesse com suas credenciais de tenant</p>
           {isDemo && (
